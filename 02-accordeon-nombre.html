@@ -10,18 +10,18 @@
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
     <div class="accordeon"
-    x-data="{isOpen: 1,}">
+    x-data="{open: 0,}">
       <section id="Premier">
-        <button @click=" isOpen === 1 ">Bouton1</button>
-        <p x-show="open" x-transition="scale.90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut vel perspiciatis corporis? Asperiores sed quae rem, nemo dolorum repellat, maiores cum itaque rerum fugit iste sint ea, similique culpa?</p>
+        <button @click=" open = 1 ">Bouton1</button>
+        <p x-show="open === 1" x-transition.scale.0>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut vel perspiciatis corporis? Asperiores sed quae rem, nemo dolorum repellat, maiores cum itaque rerum fugit iste sint ea, similique culpa?</p>
       </section>
       <section id="Second">
-        <button @click=" isOpen === 2 ">Bouton2</button>
-        <p x-show="open" x-transition="scale.90">Amet, numquam laborum cumque, eaque, inventore sunt qui blanditiis voluptate assumenda rem ducimus dolores commodi maiores facilis dolore aliquid odio aspernatur repellat? Expedita cupiditate soluta ipsum, repudiandae ut doloremque vel?</p>
+        <button @click=" open = 2 ">Bouton2</button>
+        <p x-show="open === 2" x-transition.scale.0>Amet, numquam laborum cumque, eaque, inventore sunt qui blanditiis voluptate assumenda rem ducimus dolores commodi maiores facilis dolore aliquid odio aspernatur repellat? Expedita cupiditate soluta ipsum, repudiandae ut doloremque vel?</p>
       </section>
       <section id="Troisième">
-        <button @click=" isOpen === 3 ">Bouton3</button>
-        <p x-show="open" x-transition="scale.90">Maxime temporibus dolorem facere molestiae ducimus aspernatur porro similique. Sed id obcaecati quaerat odit repudiandae saepe hic. Eius asperiores ut a iusto ad rerum ipsum. Repellat fuga pariatur similique error?</p>
+        <button @click=" open = 3 ">Bouton3</button>
+        <p x-show="open === 3" x-transition.scale.0>Maxime temporibus dolorem facere molestiae ducimus aspernatur porro similique. Sed id obcaecati quaerat odit repudiandae saepe hic. Eius asperiores ut a iusto ad rerum ipsum. Repellat fuga pariatur similique error?</p>
       </section>
     </div>
   </body>
