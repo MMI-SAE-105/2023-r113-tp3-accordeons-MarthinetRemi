@@ -10,19 +10,21 @@
   <body>
     <h1>Accordéon avec des booléens</h1>
     <div class="accordeon">
-      <section x-data="open:false">
-        <button @button1="open = ! open">Bouton1</button>
+      <section x-data="{open:false}">
+        <button @click="open = ! open">Bouton1</button>
         <p x-show="open" x-transition.duration.800ms>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga debitis placeat voluptate quia provident? Reprehenderit optio deleniti veniam culpa numquam laboriosam atque, nesciunt consectetur, at et possimus debitis tempore!
         </p>
       </section>
-      <section x-data="open:false">
-        <button>bouton 2</button>
-        <p>Quaerat blanditiis, tempore dolor quam voluptatibus, a laudantium deserunt sunt magnam odit officiis, repellat cumque dolore quasi optio totam nostrum? Eligendi unde vitae facere rerum deserunt repellat adipisci, aliquid obcaecati?</p>
+      <section x-data="{open:false}">
+        <button @click="open = ! open">Bouton2</button>
+        <p x-show="open" x-transition.duration.800ms>
+          Quaerat blanditiis, tempore dolor quam voluptatibus, a laudantium deserunt sunt magnam odit officiis, repellat cumque dolore quasi optio totam nostrum? Eligendi unde vitae facere rerum deserunt repellat adipisci, aliquid obcaecati?</p>
       </section>
-      <section x-data="open:false">
-        <button>bouton 3</button>
-        <p>Asperiores, deleniti. Quaerat nulla animi reiciendis perspiciatis et nobis, eaque officiis sit autem quis quidem sunt, quam, ipsam aut harum officia omnis veritatis cum quia impedit? Amet, libero temporibus. Quia?</p>
+      <section x-data="{open:false}">
+        <button @click="open = ! open">Bouton3</button>
+        <p x-show="open" x-transition.duration.800ms>
+          Asperiores, deleniti. Quaerat nulla animi reiciendis perspiciatis et nobis, eaque officiis sit autem quis quidem sunt, quam, ipsam aut harum officia omnis veritatis cum quia impedit? Amet, libero temporibus. Quia?</p>
       </section>
     </div>
   </body>
