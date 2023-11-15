@@ -9,18 +9,19 @@
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-    <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut vel perspiciatis corporis? Asperiores sed quae rem, nemo dolorum repellat, maiores cum itaque rerum fugit iste sint ea, similique culpa?</p>
+    <div class="accordeon"
+    x-data="{isOpen: 1,}">
+      <section id="Premier">
+        <button @click="open = ! open"></button>
+        <p x-show="open" x-transition=".scale.ori.left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut vel perspiciatis corporis? Asperiores sed quae rem, nemo dolorum repellat, maiores cum itaque rerum fugit iste sint ea, similique culpa?</p>
       </section>
-      <section>
-        <button>bouton 2</button>
-        <p>Amet, numquam laborum cumque, eaque, inventore sunt qui blanditiis voluptate assumenda rem ducimus dolores commodi maiores facilis dolore aliquid odio aspernatur repellat? Expedita cupiditate soluta ipsum, repudiandae ut doloremque vel?</p>
+      <section id="Second">
+        <button @click="open = ! open"></button>
+        <p x-show="open" x-transition=".scale.ori.left">Amet, numquam laborum cumque, eaque, inventore sunt qui blanditiis voluptate assumenda rem ducimus dolores commodi maiores facilis dolore aliquid odio aspernatur repellat? Expedita cupiditate soluta ipsum, repudiandae ut doloremque vel?</p>
       </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Maxime temporibus dolorem facere molestiae ducimus aspernatur porro similique. Sed id obcaecati quaerat odit repudiandae saepe hic. Eius asperiores ut a iusto ad rerum ipsum. Repellat fuga pariatur similique error?</p>
+      <section id="Troisième">
+        <button @click="open = ! open"></button>
+        <p x-show="open" x-transition=".scale.ori.left">Maxime temporibus dolorem facere molestiae ducimus aspernatur porro similique. Sed id obcaecati quaerat odit repudiandae saepe hic. Eius asperiores ut a iusto ad rerum ipsum. Repellat fuga pariatur similique error?</p>
       </section>
     </div>
   </body>
