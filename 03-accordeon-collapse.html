@@ -11,17 +11,17 @@
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
     <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis voluptatum assumenda dignissimos, suscipit adipisci eaque repudiandae consectetur, nobis aliquid quisquam rem! Commodi eveniet, illo exercitationem explicabo qui excepturi temporibus? Necessitatibus.</p>
+      <section x-data="{expanded:false}">
+        <button @click="expanded = ! expanded">Bouton1</button>
+        <p x-show="expanded" x-collapse >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis voluptatum assumenda dignissimos, suscipit adipisci eaque repudiandae consectetur, nobis aliquid quisquam rem! Commodi eveniet, illo exercitationem explicabo qui excepturi temporibus? Necessitatibus.</p>
       </section>
-      <section>
-        <button>bouton 2</button>
-        <p>Animi, molestias vitae. Aliquam accusantium impedit optio. Aspernatur odit rem corporis, ab nostrum autem unde minima vitae, error incidunt non excepturi soluta illo dignissimos provident, culpa magnam voluptates eius? Ad.</p>
+      <section x-data="{expanded:false}">
+        <button @click="expanded = ! expanded">Bouton2</button>
+        <p x-show="expanded" x-collapse >Animi, molestias vitae. Aliquam accusantium impedit optio. Aspernatur odit rem corporis, ab nostrum autem unde minima vitae, error incidunt non excepturi soluta illo dignissimos provident, culpa magnam voluptates eius? Ad.</p>
       </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Quidem provident doloribus atque voluptates repellendus iure, unde obcaecati sunt voluptatibus, eum ex officiis culpa quam, quibusdam laudantium illo fugiat veniam nihil minima rem asperiores ad. Voluptatem omnis hic iusto!</p>
+      <section x-data="{expanded:false}">
+        <button @click="expanded = ! expanded">Bouton3</button>
+        <p x-show="expanded" x-collapse >Quidem provident doloribus atque voluptates repellendus iure, unde obcaecati sunt voluptatibus, eum ex officiis culpa quam, quibusdam laudantium illo fugiat veniam nihil minima rem asperiores ad. Voluptatem omnis hic iusto!</p>
       </section>
     </div>
   </body>
