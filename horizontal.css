@@ -1,0 +1,44 @@
+#accordeon {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#accordeon li {
+    width: 107px;
+    /* pour cacher le contenu dépassant de l'élément */
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-color: #EEE;
+    /* pour enlever les puces */
+    margin: 3px;
+    padding: 5px;
+    /* pour arrondir les bords de 5px */
+}
+
+#accordeon li.actif {
+  width: 317px;
+}
+
+#accordeon li figure {
+  margin: 0;
+  display: inline-block;
+  width: 317px;
+}
+
+#accordeon li figure figcaption {
+    width: 200px;
+    padding-left: 10px;
+    display: inline-block;
+   
+    /* espace entre les éléments */
+}
+
+/* Sur tous les enfants de figcation */
+#accordeon li figure figcaption > * {
+  margin: 0;
+  padding: 0;
+}
