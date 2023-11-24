@@ -9,7 +9,7 @@
     <style>
       #accordeon {
     /* pour que les éléments soient alignés horizontalement */
-    display: inline-block;
+    display: flex;
     /* pour éviter les marges par défaut */
     margin: 0;
     /* pour éviter les "padding" par défaut */
@@ -22,11 +22,7 @@
     /* pour cacher le contenu dépassant de l'élément */
     overflow: hidden;
     /* pour l'animation, transition sur width */
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    transition: width 0.5 ease-in-out;
     /* couleur de fond #eee */
     background-color: #EEE;
     /* pour enlever les puces */
@@ -34,7 +30,7 @@
     /* pour espacer les éléments, marge de 3px */
     margin: 3px;
     /* pour espacer le contenu, padding de 5px */
-    padding: 5px;
+    padding: px;
     /* pour arrondir les bords de 5px */
     border-radius: 5px;
 }
@@ -48,7 +44,7 @@
     /* pour éviter les marges par défaut */
   margin: 0;
   /* pour que les éléments soient alignés horizontalement */
-  display: inline-block;
+  display: flex;
   /* largeur de l'élément intrérieur de 317px (= déplié) */
   width: 317px;
 }
@@ -59,10 +55,10 @@
     /* pour espacer le texte, padding de 10px */
     padding-left: 10px;
     /* pour que les éléments soient alignés verticalement */
-    vertical-align: top;
+    display: flex;
    
     /* espace entre les éléments */
-    display: table-cell;
+    
 }
 
 /* Sur tous les enfants de figcation */
@@ -84,7 +80,7 @@
           </figcaption>
         </figure>
       </li>
-      <li class="actif"></li>
+      <li class="actif">
         <figure>
           <img src="https://picsum.photos/100?random=2" alt="" width="102">
           <figcaption>
