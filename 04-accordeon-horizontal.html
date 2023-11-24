@@ -22,7 +22,7 @@
     /* pour cacher le contenu dépassant de l'élément */
     overflow: hidden;
     /* pour l'animation, transition sur width */
-    transition: width 0.5 ease-in-out;
+    transition: width 0.5s ease-in-out;
     /* couleur de fond #eee */
     background-color: #EEE;
     /* pour enlever les puces */
@@ -30,7 +30,7 @@
     /* pour espacer les éléments, marge de 3px */
     margin: 3px;
     /* pour espacer le contenu, padding de 5px */
-    padding: px;
+    padding: 5px;
     /* pour arrondir les bords de 5px */
     border-radius: 5px;
 }
@@ -58,7 +58,7 @@
     display: flex;
    
     /* espace entre les éléments */
-    
+    flex-direction: column;
 }
 
 /* Sur tous les enfants de figcation */
@@ -70,8 +70,8 @@
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{isOpen: 1,}">
+      <li :class="{actif:isOpen === 1,}" @click="isOpen=1">
         <figure>
           <img src="https://picsum.photos/100?random=1" alt="" width="102">
           <figcaption>
@@ -80,7 +80,7 @@
           </figcaption>
         </figure>
       </li>
-      <li class="actif">
+      <li :class="{actif:isOpen === 2,}" @click="isOpen=2">
         <figure>
           <img src="https://picsum.photos/100?random=2" alt="" width="102">
           <figcaption>
@@ -89,7 +89,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li :class="{actif:isOpen === 3,}" @click="isOpen=3">
         <figure>
           <img src="https://picsum.photos/100?random=3" alt="" width="102">
           <figcaption>
