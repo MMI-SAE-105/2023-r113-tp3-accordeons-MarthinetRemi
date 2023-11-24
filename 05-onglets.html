@@ -12,13 +12,11 @@
   </head>
   <body>
     <h1>Onglets</h1>
-    <div id="onglets" x-data="{
-      ouvert : 1,
-     }">
+    <div id="onglets" x-data="{ouvert : 1,}">
      <ul role="tablist">
-      <li role="tab" :class="{actif:isOpen === 1,}" @click="isOpen=1">Onglet 1</li>
-      <li role="tab" :class="{actif:isOpen === 2,}" @click="isOpen=2">Onglet 2</li>
-      <li role="tab" :class="{actif:isOpen === 3,}" @click="isOpen=3">Onglet 3</li>
+      <li role="tab" :class="{actif:ouvert === 1,}" @click="ouvert=1">Onglet 1</li>
+      <li role="tab" :class="{actif:ouvert === 2,}" @click="ouvert=2">Onglet 2</li>
+      <li role="tab" :class="{actif:ouvert === 3,}" @click="ouvert=3">Onglet 3</li>
      </ul>
   </body>
 </html>
